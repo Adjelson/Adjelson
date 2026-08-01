@@ -1,0 +1,22 @@
+COMO PUBLICAR
+
+1. Abra o repositório especial do perfil:
+   https://github.com/Adjelson/Adjelson
+
+2. Envie para a raiz:
+   - README.md
+   - a pasta assets completa
+
+3. Estrutura final:
+   Adjelson/
+   ├── README.md
+   └── assets/
+       ├── adjelson-banner.svg
+       └── profile-terminal.svg
+
+4. Confirme em Commit changes.
+
+IMPORTANTE:
+- Não envie somente o README.md. Os dois SVGs da pasta assets são necessários.
+- Os cartões de estatísticas dependem de serviços externos e podem levar algum tempo
+  para aparecer na primeira abertura por causa do cache do GitHub.
