@@ -216,13 +216,6 @@ Estou disponível para colaborar em projetos web e mobile, integrar equipas de d
 
 <br>
 
-```text
-while (learning) {
-    build();
-    test();
-    improve();
-}
-```
 
 </div>
 
