@@ -7,7 +7,6 @@
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Adjelson%20Neves-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/adjelson)
 [![GitHub](https://img.shields.io/badge/GitHub-Adjelson-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Adjelson)
 [![Email](https://img.shields.io/badge/Email-Contactar-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:nitoadjelson@gmail.com)
-![Localização](https://img.shields.io/badge/Madrid-Espanha-7C3AED?style=for-the-badge&logo=googlemaps&logoColor=white)
 ![Visualizações](https://komarev.com/ghpvc/?username=Adjelson&label=VISITAS&color=22d3ee&style=for-the-badge)
 
 </div>
