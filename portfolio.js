@@ -13,7 +13,8 @@
   const shards = $('#shards');
   const target = $('#impact-target');
   const next = $('#next-button');
-  const back = $('#back-button');
+  const cursor = $('#board-cursor');
+  let lastNavigationAt = -Infinity;
   const motionQuery = matchMedia('(prefers-reduced-motion: reduce)');
   const effectsButton = $('#effects-toggle');
   const arrows = '<svg viewBox="0 0 24 24" width="14" height="14" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14" stroke="currentColor" stroke-width="1.5"/></svg>';
@@ -27,10 +28,12 @@
   let effectWidth = 0, effectHeight = 0;
   const running = new Set();
   const canAnimate = () => preferredEffects && !motionQuery.matches && Boolean(ctx) && typeof Element.prototype.animate === 'function';
-  const labels = ['Passar o apagador', 'Quebrar o óbvio', 'Limpar para continuar', 'Revelar quem está por trás', 'Voltar ao início'];
+  const labels = ['Apagar o quadro', 'Quebrar o óbvio', 'Mergulhar na história', 'Revelar o retrato', 'Recomeçar'];
+  const effectNames = ['APAGAR', 'IMPACTO', 'MERGULHAR', 'REVELAR', 'RECOMEÇAR'];
 
   document.body.classList.add('interactive');
   $('#experience-controls').hidden = false;
+  next.hidden = false;
   effectsButton.hidden = false;
 
   function syncEffects() {
@@ -45,7 +48,7 @@
     board.classList.toggle('is-transitioning', value);
     board.setAttribute('aria-busy', String(value));
     next.disabled = value;
-    back.disabled = value || current === 0;
+    if (value) cursor.classList.remove('is-visible');
     chapterButtons.forEach(button => { button.disabled = value; });
   }
   function activate(index, announce = true) {
@@ -57,6 +60,8 @@
     $('#chapter-instruction').textContent = panels[index].dataset.instruction;
     $('#current-step').textContent = String(index + 1).padStart(2, '0');
     $('#next-label').textContent = labels[index];
+    cursor.querySelector('span').textContent = effectNames[index];
+    cursor.classList.toggle('impact-cursor', index === 1 || index === 3);
     chapterButtons.forEach((button, i) => {
       if (i === index) button.setAttribute('aria-current', 'step');
       else button.removeAttribute('aria-current');
@@ -97,6 +102,7 @@
     activate(index);
     setBusy(false);
     remember(index);
+    lastNavigationAt = performance.now();
     if (focus) focusHeading(index);
   }
   function resizeEffect() {
@@ -108,12 +114,12 @@
     ctx?.setTransform(ratio, 0, 0, ratio, 0, 0);
   }
   function progress(duration, callback, id) {
-    return new Promise(resolve => {
+    return new Promise((resolve, reject) => {
       const start = performance.now();
       function step(now) {
         if (id !== token) { resolve(false); return; }
         const t = canAnimate() ? Math.max(0, Math.min((now - start) / duration, 1)) : 1;
-        callback(t);
+        try { callback(t); } catch (error) { reject(error); return; }
         if (t < 1) requestAnimationFrame(step); else resolve(true);
       }
       requestAnimationFrame(step);
@@ -152,7 +158,7 @@
     eraser.style.display = 'flex';
     let previous = points[0], completed = 0;
     const dust = [];
-    await progress(1950, t => {
+    await progress(1750, t => {
       const distance = t * (points.length - 1);
       const part = Math.min(Math.floor(distance), points.length - 2);
       const f = Math.min(distance - part, 1);
@@ -174,7 +180,7 @@
       for (let i = dust.length - 1; i >= 0; i--) {
         const p = dust[i]; p.x += p.vx; p.y += p.vy; p.vy += .035; p.life -= .025;
         if (p.life <= 0) { dust.splice(i, 1); continue; }
-        ctx.fillStyle = `rgba(222,233,202,${p.life * .28})`; ctx.fillRect(p.x, p.y, 1.5, 1.5);
+        ctx.fillStyle = `rgba(20,20,20,${p.life * .35})`; ctx.fillRect(p.x, p.y, 1.5, 1.5);
       }
     }, id);
     if (id !== token) return;
@@ -219,23 +225,24 @@
     await progress(260, t => {
       ctx.clearRect(0, 0, effectWidth, effectHeight);
       const radius = 3 + (1 - t) * 55;
-      ctx.strokeStyle = `rgba(222,244,181,${t * .8})`; ctx.lineWidth = 2;
+      ctx.strokeStyle = `rgba(0,0,0,${t * .9})`; ctx.lineWidth = 2;
       ctx.beginPath(); ctx.arc(cx, cy, radius, 0, Math.PI * 2); ctx.stroke();
-      ctx.fillStyle = `rgba(239,246,219,${t})`;
+      ctx.fillStyle = `rgba(0,0,0,${t})`;
       ctx.beginPath(); ctx.arc(cx, cy, 2 + t * 5, 0, Math.PI * 2); ctx.fill();
     }, id);
     if (id !== token) return;
     target.style.display = 'none';
     const polygons = fractureMesh();
+    tween(board, [{ transform: 'translate(0,0)' }, { transform: 'translate(-9px,4px)' }, { transform: 'translate(8px,-3px)' }, { transform: 'translate(-4px,2px)' }, { transform: 'translate(0,0)' }], { duration: 320, easing: 'ease-out' });
     await progress(330, t => {
       ctx.clearRect(0, 0, effectWidth, effectHeight);
-      ctx.fillStyle = `rgba(230,243,209,${Math.max(0, .21 - t * .4)})`; ctx.fillRect(0, 0, effectWidth, effectHeight);
-      ctx.strokeStyle = `rgba(217,235,199,${.5 + t * .3})`; ctx.lineWidth = .8;
+      ctx.fillStyle = `rgba(0,0,0,${Math.max(0, .12 - t * .3)})`; ctx.fillRect(0, 0, effectWidth, effectHeight);
+      ctx.strokeStyle = `rgba(0,0,0,${.65 + t * .35})`; ctx.lineWidth = 1.7;
       const count = Math.ceil(t * polygons.length);
       polygons.slice(0, count).forEach(poly => {
         ctx.beginPath(); poly.forEach((p, i) => { if (i === 0) ctx.moveTo(p.x * effectWidth, p.y * effectHeight); else ctx.lineTo(p.x * effectWidth, p.y * effectHeight); }); ctx.closePath(); ctx.stroke();
       });
-      ctx.fillStyle = '#111a15';ctx.beginPath();ctx.arc(cx,cy,5,0,Math.PI*2);ctx.fill();
+      ctx.fillStyle = '#000';ctx.beginPath();ctx.arc(cx,cy,5,0,Math.PI*2);ctx.fill();
     }, id);
     if (id !== token) return;
     const fragments = polygons.map(poly => {
@@ -254,9 +261,32 @@
     await Promise.all(fragments.map(({ fragment, mx, my }, i) => tween(fragment,
       [{ transform: 'translate3d(0,0,0) rotate(0)', opacity: 1 },
        { transform: `translate3d(${mx * effectWidth * 1.4}px,${my * effectHeight * 1.6 + 120}px,${150 + (i % 4) * 70}px) rotate(${mx * 70}deg) rotateX(${my * 85}deg)`, opacity: 0 }],
-      { duration: 850, delay: (i % 5) * 16, easing: 'cubic-bezier(.2,.65,.3,1)', fill: 'forwards' })));
+      { duration: 1050, delay: (i % 5) * 16, easing: 'cubic-bezier(.2,.65,.3,1)', fill: 'forwards' })));
     if (id !== token) return;
     shards.replaceChildren(); await enter(panels[to], id);
+  }
+  async function ink(from, to, id) {
+    layer.classList.add('is-active'); resizeEffect();
+    const cx = effectWidth * .5, cy = effectHeight * .5;
+    const radius = Math.hypot(effectWidth, effectHeight) * .6;
+    function paint(amount, caption) {
+      ctx.clearRect(0, 0, effectWidth, effectHeight);
+      ctx.fillStyle = '#111';
+      ctx.beginPath(); ctx.arc(cx, cy, radius * amount, 0, Math.PI * 2); ctx.fill();
+      if (caption) {
+        ctx.save(); ctx.globalAlpha = Math.max(0, (amount - .6) * 2.5);
+        ctx.fillStyle = '#fff'; ctx.font = `900 ${Math.min(effectWidth * .045, 60)}px Arial`;
+        ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+        ctx.fillText('SEMPRE EM EVOLUÇÃO.', cx, cy); ctx.restore();
+      }
+    }
+    await progress(650, t => paint(1 - Math.pow(1 - t, 3), true), id);
+    if (id !== token) return;
+    activate(to);
+    await progress(650, t => paint(1 - t * t, false), id);
+    if (id !== token) return;
+    ctx.clearRect(0, 0, effectWidth, effectHeight);
+    await enter(panels[to], id);
   }
   async function navigate(index, effect = 'fade', focus = true) {
     if (busy || index === current || index < 0 || index >= panels.length) return;
@@ -269,6 +299,7 @@
       if (!canAnimate()) activate(index);
       else if (effect === 'erase') await erase(from, index, id);
       else if (effect === 'shatter') await shatter(from, index, id);
+      else if (effect === 'ink') await ink(from, index, id);
       else {
         await tween(from, [{ opacity: 1 }, { opacity: 0 }], { duration: 140 });
         if (id !== token) return;
@@ -281,10 +312,59 @@
       if (id === token) finish(index, focus);
     }
   }
-  function forward() { navigate(current === 4 ? 0 : current + 1, current === 4 ? 'fade' : current % 2 === 0 ? 'erase' : 'shatter'); }
+  function forward() { navigate(current === 4 ? 0 : current + 1, ['erase', 'shatter', 'ink', 'shatter', 'fade'][current]); }
   next.addEventListener('click', forward);
-  back.addEventListener('click', () => navigate(current - 1));
+
   chapterButtons.forEach(button => button.addEventListener('click', () => navigate(Number(button.dataset.chapter))));
+  // The board itself is the control surface. Preserve links, cards and text selection.
+  const finePointer = matchMedia('(hover: hover) and (pointer: fine)');
+  let press = null, pointerTravelled = false;
+  viewport.addEventListener('pointerdown', event => {
+    press = { x: event.clientX, y: event.clientY };
+    pointerTravelled = false;
+  });
+  viewport.addEventListener('pointermove', event => {
+    if (press && Math.hypot(event.clientX - press.x, event.clientY - press.y) > 7) pointerTravelled = true;
+    const interactive = event.target.closest('button, a, input, textarea, select');
+    const visible = finePointer.matches && !busy && !interactive && !motionQuery.matches;
+    cursor.classList.toggle('is-visible', visible);
+    cursor.style.left = event.clientX + 'px'; cursor.style.top = event.clientY + 'px';
+    cursor.querySelector('span').textContent = canAnimate() ? effectNames[current] : 'CONTINUAR';
+  }, { passive: true });
+  viewport.addEventListener('pointerleave', () => cursor.classList.remove('is-visible'));
+  viewport.addEventListener('pointercancel', () => { pointerTravelled = true; press = null; });
+  viewport.addEventListener('click', event => {
+    if (event.button !== 0 || event.ctrlKey || event.metaKey || event.altKey || event.shiftKey || busy || pointerTravelled) return;
+    if (event.target.closest('a, button, input, textarea, select, [contenteditable]')) return;
+    if (window.getSelection()?.toString().trim()) return;
+    // The final contact screen stays put; replay is an explicit action.
+    if (current < 4) forward();
+  });
+  document.addEventListener('pointerup', () => { press = null; });
+
+  // Scroll inner content first. A fresh wheel gesture at an edge changes chapter.
+  let wheelAmount = 0, lastWheelAt = 0, lastPanelScrollAt = -Infinity;
+  panels.forEach(panel => panel.addEventListener('scroll', () => { lastPanelScrollAt = performance.now(); }, { passive: true }));
+  viewport.addEventListener('wheel', event => {
+    if (event.ctrlKey || event.metaKey || Math.abs(event.deltaX) > Math.abs(event.deltaY)) return;
+    const now = performance.now();
+    if (busy) { event.preventDefault(); wheelAmount = 0; return; }
+    const panel = panels[current], down = event.deltaY > 0;
+    const atEdge = down ? panel.scrollTop + panel.clientHeight >= panel.scrollHeight - 3 : panel.scrollTop <= 2;
+    if (!atEdge) { wheelAmount = 0; return; }
+    if ((down && current === 4) || (!down && current === 0)) return;
+    event.preventDefault();
+    if (now - lastNavigationAt < 850 || now - lastPanelScrollAt < 360) { wheelAmount = 0; return; }
+    if (now - lastWheelAt > 200 || Math.sign(wheelAmount) !== Math.sign(event.deltaY)) wheelAmount = 0;
+    lastWheelAt = now;
+    const delta = event.deltaY * (event.deltaMode === 1 ? 16 : event.deltaMode === 2 ? viewport.clientHeight : 1);
+    wheelAmount += delta;
+    if (Math.abs(wheelAmount) >= 150) {
+      wheelAmount = 0;
+      if (down) forward(); else navigate(current - 1);
+    }
+  }, { passive: false });
+
   document.querySelectorAll('a[href^="#"]').forEach(link => link.addEventListener('click', event => {
     if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
     const index = panels.findIndex(panel => '#' + panel.id === link.hash);
@@ -339,17 +419,17 @@
     if (!nc || !nw || !nh) return;
     nc.clearRect(0, 0, nw, nh);
     const spacing = 46;
-    nc.strokeStyle = '#7ec5b516'; nc.lineWidth = .6;
+    nc.strokeStyle = '#11111110'; nc.lineWidth = .6;
     for (let x = 0; x < nw; x += spacing) { nc.beginPath(); nc.moveTo(x, 0); nc.lineTo(x, nh); nc.stroke(); }
     for (let y = 0; y < nh; y += spacing) { nc.beginPath(); nc.moveTo(0, y); nc.lineTo(nw, y); nc.stroke(); }
     for (let i = 0; i < 14; i++) {
       const x = ((i * 173 + 25) % Math.max(nw, 1)), y = ((i * 97 + 55) % Math.max(nh, 1));
       const length = 50 + (i % 4) * 25;
-      nc.strokeStyle = '#93d9c52b'; nc.lineWidth = 1;
+      nc.strokeStyle = '#11111125'; nc.lineWidth = 1;
       nc.beginPath();nc.moveTo(x, y);nc.lineTo(x + length, y);nc.lineTo(x + length + 18, y - 18);nc.lineTo(x + length + 18, y - 55);nc.stroke();
       const p = (phase * .16 + i * .11) % 1;
-      nc.fillStyle = '#b5e8c4';nc.beginPath();nc.arc(x + p * length, y, 1.7, 0, Math.PI * 2);nc.fill();
-      nc.strokeStyle = '#a1ddbf55';nc.beginPath();nc.arc(x,y,3,0,Math.PI*2);nc.stroke();
+      nc.fillStyle = '#111111';nc.beginPath();nc.arc(x + p * length, y, 1.7, 0, Math.PI * 2);nc.fill();
+      nc.strokeStyle = '#11111155';nc.beginPath();nc.arc(x,y,3,0,Math.PI*2);nc.stroke();
     }
   }
   function networkLoop(now) {
