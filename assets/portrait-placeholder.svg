@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="720" viewBox="0 0 600 720" fill="none">
+<defs>
+  <linearGradient id="bg" x2="600" y2="720" gradientUnits="userSpaceOnUse"><stop stop-color="#163d42"/><stop offset="1" stop-color="#081a20"/></linearGradient>
+  <linearGradient id="head" x1="200" y1="160" x2="405" y2="452" gradientUnits="userSpaceOnUse"><stop stop-color="#b1d4c1"/><stop offset=".42" stop-color="#6d9e96"/><stop offset="1" stop-color="#294a51"/></linearGradient>
+  <linearGradient id="body" x1="160" y1="440" x2="450" y2="780" gradientUnits="userSpaceOnUse"><stop stop-color="#3d736e"/><stop offset=".45" stop-color="#163a41"/><stop offset="1" stop-color="#0c222e"/></linearGradient>
+  <radialGradient id="light"><stop stop-color="#87e3c5" stop-opacity=".24"/><stop offset="1" stop-color="#87e3c5" stop-opacity="0"/></radialGradient>
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" stroke="#aad5c8" stroke-opacity=".05"/></pattern>
+</defs>
+<path fill="url(#bg)" d="M0 0h600v720H0z"/><path fill="url(#grid)" d="M0 0h600v720H0z"/><circle cx="290" cy="280" r="290" fill="url(#light)"/>
+<circle cx="300" cy="285" r="190" stroke="#8cc6bb" stroke-opacity=".25"/><circle cx="300" cy="285" r="213" stroke="#8cc6bb" stroke-opacity=".13" stroke-dasharray="4 12"/>
+<path d="M68 720v-89c0-77 47-131 126-155l64-25h84l64 25c79 24 126 78 126 155v89Z" fill="url(#body)"/>
+<path d="M254 412h92v59l-46 62-46-62Z" fill="#416d6b"/>
+<path d="M199 246c0-84 40-126 101-126s101 42 101 126v66c0 84-45 139-101 139s-101-55-101-139Z" fill="url(#head)"/>
+<path d="M199 268c-18-77-12-137 31-165 44-30 102-27 143-1 44 27 54 79 28 166l-17-64c-59 2-101-10-136-40-5 42-16 74-49 104Z" fill="#102a30"/>
+<path d="M199 268c-18-77-12-137 31-165 44-30 102-27 143-1" stroke="#7bb6a8" stroke-opacity=".5" stroke-width="2"/>
+<path d="m300 238-10 83 24 7" stroke="#c6e2cf" stroke-opacity=".25" stroke-width="3" stroke-linecap="round"/>
+<path d="M238 271h36m52 0h36" stroke="#183d43" stroke-width="4" stroke-linecap="round"/>
+<path d="M274 367q26 14 52-2" stroke="#a8cbb8" stroke-opacity=".6" stroke-width="3" stroke-linecap="round"/>
+<path d="m254 456-35 35 81 100 81-100-35-35-46 77Z" fill="#1b4147" stroke="#7fb3a1" stroke-opacity=".25"/>
+<path d="M300 591v129M99 668h108m186 0h108" stroke="#8ccebb" stroke-opacity=".16"/>
+<g stroke="#b5ecd3" stroke-opacity=".6"><path d="M70 90h30M70 90v30M500 90h30v30M70 570v30h30M530 570v30h-30"/><path d="M460 370h65v-60M78 345v-64h65" stroke-opacity=".25"/></g>
+<g fill="#a1cdbd" font-family="monospace" font-size="10" letter-spacing="2"><text x="66" y="650">HUMAN / CREATOR</text><text x="66" y="675" font-size="8" fill="#6c9a92">RETRATO ILUSTRATIVO</text></g>
+</svg>
