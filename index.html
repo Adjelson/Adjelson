@@ -3,102 +3,83 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Entra no quadro de Adjelson Neves: uma experiência interativa sobre desenvolvimento Frontend, Full Stack e ideias que ganham vida.">
-  <meta name="theme-color" content="#ffffff">
-  <title>O quadro de Adjelson — Creative Developer</title>
+  <meta name="description" content="Adjelson Neves — Frontend & Full Stack Developer. React, TypeScript e interfaces com personalidade.">
+  <meta name="theme-color" content="#f5f3eb">
+  <title>Adjelson Neves — Ideias que ganham vida.</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="stylesheet" href="portfolio.css">
 </head>
 <body>
-  <a class="skip-link" href="#quadro">Saltar para o quadro</a>
-  <div class="ambient" aria-hidden="true"></div>
-  <div class="page">
-    <header class="site-header">
-      <a class="brand" href="#inicio" aria-label="Adjelson Neves, início">an<span>.</span><small>ADJELSON NEVES<br>FRONTEND & FULL STACK</small></a>
-      <div class="header-actions">
-        <button class="effects-toggle" id="effects-toggle" type="button" aria-pressed="true" hidden><span class="status-dot"></span><span id="effects-label">Efeitos ligados</span></button>
-        <a class="contact-shortcut" href="#contacto">Vamos conversar <span aria-hidden="true">↗</span></a>
+  <a class="skip-link" href="#conteudo">Saltar para o conteúdo</a>
+  <div class="reading-progress" aria-hidden="true"></div>
+  <header class="site-header">
+    <nav class="wrap navigation" aria-label="Navegação principal">
+      <a class="brand" href="#inicio" aria-label="Adjelson Neves, início">an<span><svg class="star-icon" viewBox="0 0 100 100" aria-hidden="true"><path d="m50 0 8 31L85 15 69 42l31 8-31 8 16 27-27-16-8 31-8-31-27 16 16-27L0 50l31-8-16-27 27 16Z"/></svg></span></a>
+      <span class="nav-caption">ADJELSON NEVES<br>FRONTEND & FULL STACK</span>
+      <div class="nav-links"><a href="#trabalho">Trabalho</a><a href="#sobre">Sobre</a><a href="#contacto" class="nav-contact">Diz olá <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></div>
+    </nav>
+  </header>
+  <main id="conteudo">
+    <section class="hero wrap" id="inicio" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="mini-star" aria-hidden="true"><svg class="star-icon" viewBox="0 0 100 100" aria-hidden="true"><path d="m50 0 8 31L85 15 69 42l31 8-31 8 16 27-27-16-8 31-8-31-27 16 16-27L0 50l31-8-16-27 27 16Z"/></svg></span> CÓDIGO COM PERSONALIDADE.</div>
+        <h1 id="hero-title"><span class="title-line">Boas ideias.</span><span class="title-line"><em>Ganham vida.</em></span></h1>
+        <p>Sou o Adjelson. Crio interfaces intuitivas<br> com <strong>React, TypeScript</strong> e curiosidade.</p>
+        <a class="button button-dark magnetic" href="#trabalho">Vê o que construo <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a>
+        <div class="hero-footnote"><span class="small-dot"></span> FEITO POR UM HUMANO. PARA PESSOAS.</div>
       </div>
-    </header>
-
-    <main id="quadro">
-      <div class="experience-heading">
-        <div><span class="overline">ISTO É UM QUADRO. O PRÓXIMO TRAÇO É TEU.</span><p id="chapter-instruction">Tudo começa com uma ideia. Esta é a minha.</p></div>
-        <span class="edition">VOLUME 01<br>PORTUGAL / 2026</span>
+      <div class="hero-art" aria-label="Composição ilustrada com uma janela de código e formas coloridas">
+        <div class="art-grid" aria-hidden="true"></div>
+        <div class="art-flower" aria-hidden="true"><svg viewBox="0 0 300 300"><path d="M290.00,150.00L289.45,153.65L287.82,157.22L285.19,160.64L281.66,163.84L277.40,166.77L272.58,169.41L267.40,171.76L262.09,173.83L256.86,175.65L251.91,177.31L247.43,178.86L243.58,180.40L240.48,182.04L238.23,183.87L236.84,185.97L236.33,188.44L236.64,191.32L237.67,194.67L239.30,198.48L241.37,202.75L243.70,207.42L246.11,212.41L248.40,217.63L250.40,222.95L251.95,228.23L252.89,233.32L253.12,238.07L252.56,242.35L251.19,246.02L248.99,248.99L246.02,251.19L242.35,252.56L238.07,253.12L233.32,252.89L228.23,251.95L222.95,250.40L217.63,248.40L212.41,246.11L207.42,243.70L202.75,241.37L198.48,239.30L194.67,237.67L191.32,236.64L188.44,236.33L185.97,236.84L183.87,238.23L182.04,240.48L180.40,243.58L178.86,247.43L177.31,251.91L175.65,256.86L173.83,262.09L171.76,267.40L169.41,272.58L166.77,277.40L163.84,281.66L160.64,285.19L157.22,287.82L153.65,289.45L150.00,290.00L146.35,289.45L142.78,287.82L139.36,285.19L136.16,281.66L133.23,277.40L130.59,272.58L128.24,267.40L126.17,262.09L124.35,256.86L122.69,251.91L121.14,247.43L119.60,243.58L117.96,240.48L116.13,238.23L114.03,236.84L111.56,236.33L108.68,236.64L105.33,237.67L101.52,239.30L97.25,241.37L92.58,243.70L87.59,246.11L82.37,248.40L77.05,250.40L71.77,251.95L66.68,252.89L61.93,253.12L57.65,252.56L53.98,251.19L51.01,248.99L48.81,246.02L47.44,242.35L46.88,238.07L47.11,233.32L48.05,228.23L49.60,222.95L51.60,217.63L53.89,212.41L56.30,207.42L58.63,202.75L60.70,198.48L62.33,194.67L63.36,191.32L63.67,188.44L63.16,185.97L61.77,183.87L59.52,182.04L56.42,180.40L52.57,178.86L48.09,177.31L43.14,175.65L37.91,173.83L32.60,171.76L27.42,169.41L22.60,166.77L18.34,163.84L14.81,160.64L12.18,157.22L10.55,153.65L10.00,150.00L10.55,146.35L12.18,142.78L14.81,139.36L18.34,136.16L22.60,133.23L27.42,130.59L32.60,128.24L37.91,126.17L43.14,124.35L48.09,122.69L52.57,121.14L56.42,119.60L59.52,117.96L61.77,116.13L63.16,114.03L63.67,111.56L63.36,108.68L62.33,105.33L60.70,101.52L58.63,97.25L56.30,92.58L53.89,87.59L51.60,82.37L49.60,77.05L48.05,71.77L47.11,66.68L46.88,61.93L47.44,57.65L48.81,53.98L51.01,51.01L53.98,48.81L57.65,47.44L61.93,46.88L66.68,47.11L71.77,48.05L77.05,49.60L82.37,51.60L87.59,53.89L92.58,56.30L97.25,58.63L101.52,60.70L105.33,62.33L108.68,63.36L111.56,63.67L114.03,63.16L116.13,61.77L117.96,59.52L119.60,56.42L121.14,52.57L122.69,48.09L124.35,43.14L126.17,37.91L128.24,32.60L130.59,27.42L133.23,22.60L136.16,18.34L139.36,14.81L142.78,12.18L146.35,10.55L150.00,10.00L153.65,10.55L157.22,12.18L160.64,14.81L163.84,18.34L166.77,22.60L169.41,27.42L171.76,32.60L173.83,37.91L175.65,43.14L177.31,48.09L178.86,52.57L180.40,56.42L182.04,59.52L183.87,61.77L185.97,63.16L188.44,63.67L191.32,63.36L194.67,62.33L198.48,60.70L202.75,58.63L207.42,56.30L212.41,53.89L217.63,51.60L222.95,49.60L228.23,48.05L233.32,47.11L238.07,46.88L242.35,47.44L246.02,48.81L248.99,51.01L251.19,53.98L252.56,57.65L253.12,61.93L252.89,66.68L251.95,71.77L250.40,77.05L248.40,82.37L246.11,87.59L243.70,92.58L241.37,97.25L239.30,101.52L237.67,105.33L236.64,108.68L236.33,111.56L236.84,114.03L238.23,116.13L240.48,117.96L243.58,119.60L247.43,121.14L251.91,122.69L256.86,124.35L262.09,126.17L267.40,128.24L272.58,130.59L277.40,133.23L281.66,136.16L285.19,139.36L287.82,142.78L289.45,146.35L290.00,150.00Z"/></svg></div>
+        <div class="art-orbit" aria-hidden="true"></div>
+        <div class="floating-window"><div class="window-header"><div aria-hidden="true"><i></i><i></i><i></i></div><span>ideia-em-construção.tsx</span><span aria-hidden="true"><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></span></div><div class="window-content"><span class="window-comment">// do primeiro clique ao wow.</span><div class="code-mark" aria-hidden="true">&lt;<span>criar</span> /&gt;</div><div class="window-code"><b>const</b> ideia = {<br>&nbsp; pessoas: <em>'primeiro'</em>,<br>&nbsp; possibilidades: <em>Infinity</em><br>};</div><div class="window-status"><span></span> Pronto para ganhar vida.</div></div></div>
+        <div class="art-sphere" aria-hidden="true"><img src="assets/play-sphere.svg" alt="" width="220" height="220"></div>
+        <div class="art-sticker">design + código<svg viewBox="0 0 100 30" aria-hidden="true"><path d="M3 22Q35 2 95 12M30 28Q68 12 96 21"/></svg></div>
+        <button class="spark-button" id="spark-button" type="button" aria-label="Soltar uma ideia colorida"><svg viewBox="0 0 100 100" aria-hidden="true"><path d="m50 0 8 31L85 15 69 42l31 8-31 8 16 27-27-16-8 31-8-31-27 16 16-27L0 50l31-8-16-27 27 16Z"/></svg><span>clica em mim!</span></button>
+        <span class="art-coordinate">IDEIA 001 / INFINITAS POSSIBILIDADES</span>
       </div>
-      <div class="board" id="board" aria-describedby="mouse-instruction">
-        <div class="board-top"><span><i class="status-dot"></i> O QUADRO DE ADJELSON</span><span class="board-top-right">PENSAR. RISCAR. CONSTRUIR.</span></div>
-        <div class="board-viewport" id="board-viewport">
-          <section class="panel welcome-panel" id="inicio" aria-labelledby="welcome-title" data-instruction="Tudo começa com uma ideia. Esta é a minha.">
-            <div class="welcome-copy">
-              <span class="chapter-kicker">01 / PRAZER, SOU O ADJELSON</span>
-              <h1 id="welcome-title">Ideias grandes.<br>Código no <span class="chalk-word">quadro.<svg viewBox="0 0 370 25" aria-hidden="true"><path d="M5 16Q150 0 362 11M40 22Q220 9 336 17"/></svg></span></h1>
-              <p class="lead">Transformo ideias em interfaces que fazem sentido.<br> Com curiosidade, propósito e umas boas linhas de código.</p>
-              <div class="welcome-note"><span class="hand-arrow" aria-hidden="true">*</span><span>O quadro é teu.<br><strong>Clica. Apaga. Descobre.</strong></span></div>
-              <div class="mini-bio"><span>ENGENHEIRO INFORMÁTICO</span><i></i><span>REACT & TYPESCRIPT</span></div>
-            </div>
-            <div class="idea-illustration" aria-label="Ilustração de uma ideia que se transforma em código e numa experiência digital" role="img">
-              <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
-              <span class="doodle-plus plus-one">+</span><span class="doodle-plus plus-two">+</span>
-              <span class="hand-label label-idea">primeiro, a faísca.</span>
-              <svg class="idea-path" viewBox="0 0 480 430" fill="none" aria-hidden="true"><path d="M100 80C15 120 40 260 141 270M310 100C420 70 460 196 368 240M347 354c-60 80-176 32-164-17" stroke-dasharray="4 8"/><path d="m132 258 12 13-18 6m248-50-9 15 18 1"/></svg>
-              <div class="bulb" aria-hidden="true"><svg viewBox="0 0 90 100" fill="none"><path d="M45 12c-32 0-43 38-22 57 5 5 6 9 6 12h32c0-3 1-7 6-12 21-19 10-57-22-57Z"/><path d="M32 90h26M37 97h16M35 47l10 14 11-14M45 61v20M45 1v-7M7 10l-8-7M82 10l8-7M1 44h-10M89 44h10"/></svg></div>
-              <div class="code-window"><div class="code-bar"><i></i><i></i><i></i><span>uma-boa-ideia.tsx</span></div><pre><span class="code-purple">const</span> criar = (ideia) <span class="code-purple">=&gt;</span> {
-  <span class="code-purple">return</span> {
-    pessoas: <span class="code-lime">'primeiro'</span>,
-    interface: <span class="code-lime">'intuitiva'</span>,
-    possibilidades: <span class="code-lime">Infinity</span>
-  };
-};</pre></div>
-              <div class="result-sticker"><span class="check-icon">✓</span><span>ideia → realidade<small>É AQUI QUE EU ENTRO.</small></span></div>
-              <span class="hand-label label-result">menos blá-blá-blá.<br>mais fazer acontecer.</span>
-            </div>
-          </section>
+      <a href="#trabalho" class="scroll-note">Há mais lá em baixo <span aria-hidden="true">↓</span></a>
+    </section>
 
-          <section class="panel skills-panel" id="capacidades" aria-labelledby="skills-title" data-instruction="Quadro limpo. Agora, o que sei construir.">
-            <div class="panel-intro"><span class="chapter-kicker">02 / A MINHA CAIXA DE FERRAMENTAS</span><h2 id="skills-title">Não é magia.<br>É <span class="chalk-word">engenharia.</span></h2><p class="lead">Da primeira interação à última resposta da API.<br> Escolhe uma área e espreita o que está por trás.</p><div class="skill-detail" id="skill-detail" aria-live="polite"><span class="detail-label">01 — FRONTEND</span><h3>Interfaces que dão vontade de usar.</h3><p>Componentes reutilizáveis, interfaces responsivas e integração de APIs. O meu foco é React e TypeScript, com atenção à experiência de quem está do outro lado.</p></div></div>
-            <div class="toolbox" role="group" aria-label="Explorar competências">
-              <button class="skill-card is-selected" data-skill="frontend" aria-pressed="true"><span class="skill-number">01</span><span class="skill-symbol" aria-hidden="true">&lt;/&gt;</span><span class="skill-title">Frontend & interfaces</span><span class="skill-tags">React · TypeScript · Next.js · Vue.js</span><span class="skill-open" aria-hidden="true">↗</span></button>
-              <button class="skill-card" data-skill="backend" aria-pressed="false"><span class="skill-number">02</span><span class="skill-symbol" aria-hidden="true">{ }</span><span class="skill-title">Backend & dados</span><span class="skill-tags">Node.js · Express · SQL · MySQL</span><span class="skill-open" aria-hidden="true">↗</span></button>
-              <button class="skill-card" data-skill="workflow" aria-pressed="false"><span class="skill-number">03</span><span class="skill-symbol" aria-hidden="true">git_</span><span class="skill-title">Ferramentas & equipa</span><span class="skill-tags">Git · Docker · Agile · IA generativa</span><span class="skill-open" aria-hidden="true">↗</span></button>
-              <span class="hand-label toolbox-note">boas ferramentas.<br>melhores possibilidades.</span>
-            </div>
-          </section>
+    <div class="ticker-shell" aria-label="React, TypeScript, Next.js e interfaces com propósito"><div class="ticker" aria-hidden="true"><div class="ticker-group"><span>React</span><i><svg class="star-icon" viewBox="0 0 100 100" aria-hidden="true"><path d="m50 0 8 31L85 15 69 42l31 8-31 8 16 27-27-16-8 31-8-31-27 16 16-27L0 50l31-8-16-27 27 16Z"/></svg></i><span>TypeScript</span><i><svg class="star-icon" viewBox="0 0 100 100" aria-hidden="true"><path d="m50 0 8 31L85 15 69 42l31 8-31 8 16 27-27-16-8 31-8-31-27 16 16-27L0 50l31-8-16-27 27 16Z"/></svg></i><span>Interfaces com propósito</span><i><svg class="star-icon" viewBox="0 0 100 100" aria-hidden="true"><path d="m50 0 8 31L85 15 69 42l31 8-31 8 16 27-27-16-8 31-8-31-27 16 16-27L0 50l31-8-16-27 27 16Z"/></svg></i><span>Next.js</span><i><svg class="star-icon" viewBox="0 0 100 100" aria-hidden="true"><path d="m50 0 8 31L85 15 69 42l31 8-31 8 16 27-27-16-8 31-8-31-27 16 16-27L0 50l31-8-16-27 27 16Z"/></svg></i></div><div class="ticker-group"><span>React</span><i><svg class="star-icon" viewBox="0 0 100 100" aria-hidden="true"><path d="m50 0 8 31L85 15 69 42l31 8-31 8 16 27-27-16-8 31-8-31-27 16 16-27L0 50l31-8-16-27 27 16Z"/></svg></i><span>TypeScript</span><i><svg class="star-icon" viewBox="0 0 100 100" aria-hidden="true"><path d="m50 0 8 31L85 15 69 42l31 8-31 8 16 27-27-16-8 31-8-31-27 16 16-27L0 50l31-8-16-27 27 16Z"/></svg></i><span>Interfaces com propósito</span><i><svg class="star-icon" viewBox="0 0 100 100" aria-hidden="true"><path d="m50 0 8 31L85 15 69 42l31 8-31 8 16 27-27-16-8 31-8-31-27 16 16-27L0 50l31-8-16-27 27 16Z"/></svg></i><span>Next.js</span><i><svg class="star-icon" viewBox="0 0 100 100" aria-hidden="true"><path d="m50 0 8 31L85 15 69 42l31 8-31 8 16 27-27-16-8 31-8-31-27 16 16-27L0 50l31-8-16-27 27 16Z"/></svg></i></div></div></div>
 
-          <section class="panel projects-panel" id="projetos" aria-labelledby="projects-title" data-instruction="Quebrar o óbvio. Construir algo que faz diferença.">
-            <div class="projects-heading"><div><span class="chapter-kicker">03 / CÓDIGO FORA DO PAPEL</span><h2 id="projects-title">Ok, mas o que já <span class="chalk-word">construí?</span></h2></div><a class="subtle-link" href="https://github.com/Adjelson" target="_blank" rel="noopener noreferrer">Explorar GitHub <span aria-hidden="true">↗</span></a></div>
-            <div class="project-grid">
-              <article class="project"><div class="project-image"><img src="assets/portfolio-data.svg" alt="Ilustração conceptual de um painel de gestão de dados estatísticos" width="900" height="680"><span class="image-caption">ILUSTRAÇÃO CONCEPTUAL</span></div><div class="project-meta"><span>01 / FULL STACK · INE</span><span>2025 — 2026</span></div><h3>Dados com propósito.</h3><p>Desenvolvimento e otimização de aplicações SIGI para visualizar e gerir dados estatísticos de grande escala.</p><div class="tags"><span>SIGI</span><span>Gestão de dados</span><span>Tempo real</span></div></article>
-              <article class="project"><div class="project-image"><img src="assets/portfolio-services.svg" alt="Ilustração conceptual de uma interface de serviços digitais" width="900" height="680"><span class="image-caption">ILUSTRAÇÃO CONCEPTUAL</span></div><div class="project-meta"><span>02 / FRONTEND · DGRSN</span><span>2025</span></div><h3>Serviços mais próximos.</h3><p>Interfaces e componentes reutilizáveis para os Registos e Serviços Notariais, com foco na experiência do utilizador.</p><div class="tags"><span>Next.js</span><span>Vue.js</span><span>Tailwind CSS</span><span>Docker</span></div></article>
-            </div>
-          </section>
-
-          <section class="panel journey-panel" id="percurso" aria-labelledby="journey-title" data-instruction="Cada experiência deixa uma marca. Estas são as minhas.">
-            <div class="panel-intro"><span class="chapter-kicker">04 / NADA DISTO ACONTECEU NUM DIA</span><h2 id="journey-title">Aprender.<br>Experimentar.<br><span class="chalk-word">Evoluir.</span></h2><p class="lead">Licenciado em Engenharia Informática pela USTP.<br> Uma experiência Erasmus+ no Politécnico de Beja.<br> E muita vontade de construir o que vem a seguir.</p><div class="credentials"><span>JavaScript Essentials <b>CISCO</b></span><span>AI Fundamentals <b>IBM SKILLSBUILD</b></span></div></div>
-            <div class="timeline"><article class="job"><span class="job-dot"></span><time>SET 2025 — MAI 2026</time><h3>Desenvolvedor Full Stack</h3><h4>Instituto Nacional de Estatística</h4><p>Aplicações SIGI, visualização de informação e integridade de dados estatísticos.</p></article><article class="job"><span class="job-dot"></span><time>FEV — SET 2025</time><h3>Desenvolvedor Frontend</h3><h4>Direção-Geral dos Registos e Serviços Notariais</h4><p>Interfaces web com Next.js, Vue.js e Tailwind CSS em aplicações integradas em Docker.</p></article><article class="job"><span class="job-dot"></span><time>ABR — DEZ 2024</time><h3>Consultor de TI</h3><h4>Instituto Nacional de Estatística</h4><p>Questionários digitais em CSPro e Field Maps para apoiar a recolha de dados.</p></article><article class="job"><span class="job-dot"></span><time>DEZ 2023 — ABR 2024</time><h3>Estágio em Helpdesk</h3><h4>Instituto Nacional de Estatística</h4><p>Equipamentos, instalação de software e resolução de problemas técnicos.</p></article></div>
-          </section>
-
-          <section class="panel contact-panel" id="contacto" aria-labelledby="contact-title" data-instruction="Fim do quadro. Início de uma boa conversa.">
-            <canvas class="contact-network" id="contact-network" aria-hidden="true"></canvas>
-            <div class="portrait-area"><div class="portrait-orbit orbit-a"></div><div class="portrait-orbit orbit-b"></div><span class="portrait-coordinate coordinate-top">38° N / CREATIVE MIND</span><div class="portrait-frame"><!-- Substitui este src pela tua fotografia, por exemplo assets/adjelson.jpg. --><img src="assets/portrait-placeholder.svg" alt="Retrato ilustrativo provisório; será substituído pela fotografia de Adjelson" width="600" height="720" id="portrait"><span class="portrait-scan" aria-hidden="true"></span></div><span class="portrait-caption">IMAGEM PROVISÓRIA / O TEU RETRATO ENTRA AQUI</span><div class="name-tag">Adjelson das Neves<span>HUMANO POR TRÁS DO CÓDIGO.</span></div></div>
-            <div class="contact-copy"><span class="chapter-kicker"><i class="status-dot"></i> 05 / A PRÓXIMA IDEIA PODE SER A TUA</span><h2 id="contact-title">Já me conheces.<br>Agora, <span>vamos criar?</span></h2><p>Uma oportunidade, um projeto ou aquela ideia que ainda não saiu do papel. Vamos conversar.</p><a class="email-link" href="mailto:nitoadjelson@gmail.com">nitoadjelson@gmail.com <span aria-hidden="true">↗</span></a><div class="contact-socials"><a href="https://linkedin.com/in/adjelson" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a><a href="https://github.com/Adjelson" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a></div><span class="contact-location">PORTUGAL · FRONTEND & FULL STACK DEVELOPER</span></div>
-          </section>
-        </div>
-        <span class="scroll-hint" id="scroll-hint" aria-hidden="true" hidden>DESLIZA NO QUADRO <span>↓</span></span>
-        <button class="board-action" id="next-button" type="button" hidden><span id="next-label">Apagar o quadro</span><span class="action-dot" aria-hidden="true"></span></button>
-        <div class="board-tray" aria-hidden="true"><div class="chalk-piece white-chalk"></div><div class="chalk-piece lime-chalk"></div><span class="tray-caption">CANETA PRETA. IDEIAS SEM LIMITES.</span><div class="parked-eraser"></div></div>
-        <div class="effect-layer" id="effect-layer" aria-hidden="true"><canvas id="effect-canvas"></canvas><div class="moving-eraser" id="moving-eraser"><span>IDEAS / RESET</span><i></i></div><div class="shards" id="shards"></div><div class="impact-target" id="impact-target"><i></i><span>PRÓXIMA IDEIA EM 3, 2…</span></div></div>
+    <section class="work-section wrap" id="trabalho" aria-labelledby="work-title">
+      <div class="section-heading" data-reveal><div><div class="eyebrow">01 / TRABALHO SELECIONADO</div><h2 id="work-title">Do código<br>ao <em>mundo real.</em></h2></div><p>Interfaces claras.<br>Problemas reais. Soluções úteis.</p></div>
+      <div class="projects">
+        <article class="project" data-reveal>
+          <div class="project-cover cover-purple" data-tilt><div class="cover-decoration" aria-hidden="true"><svg class="star-icon" viewBox="0 0 100 100" aria-hidden="true"><path d="m50 0 8 31L85 15 69 42l31 8-31 8 16 27-27-16-8 31-8-31-27 16 16-27L0 50l31-8-16-27 27 16Z"/></svg></div><img src="assets/portfolio-data.svg" alt="Ilustração conceptual de um painel SIGI para gestão de dados estatísticos" width="900" height="680" loading="lazy"><span class="cover-label">DADOS → DECISÕES</span><span class="cover-caption">Ilustração conceptual</span></div>
+          <div class="project-category"><span>FULL STACK / INE</span><span>2025 — 2026</span></div>
+          <h3>SIGI. Dados com propósito.</h3><p>Aplicações para visualizar e gerir dados estatísticos de grande escala.</p><div class="tags"><span>Gestão de dados</span><span>Tempo real</span></div>
+        </article>
+        <article class="project project-offset" data-reveal>
+          <div class="project-cover cover-lime" data-tilt><div class="cover-decoration" aria-hidden="true"><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></div><img src="assets/portfolio-services.svg" alt="Ilustração conceptual de uma interface para serviços digitais institucionais" width="900" height="680" loading="lazy"><span class="cover-label">SERVIÇOS → PESSOAS</span><span class="cover-caption">Ilustração conceptual</span></div>
+          <div class="project-category"><span>FRONTEND / DGRSN</span><span>2025</span></div>
+          <h3>Serviços mais próximos.</h3><p>Interfaces e componentes reutilizáveis para os Registos e Serviços Notariais.</p><div class="tags"><span>Next.js</span><span>Vue.js</span><span>Tailwind CSS</span></div>
+        </article>
       </div>
+      <a class="text-link" href="https://github.com/Adjelson" target="_blank" rel="noopener noreferrer">Mais código no GitHub <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a>
+    </section>
 
-      <div class="experience-controls" id="experience-controls" hidden>
-        <div class="chapter-controls"><span class="step-counter"><b id="current-step">01</b> / 05</span><nav class="chapter-nav" aria-label="Etapas do portfólio"><button type="button" data-chapter="0" aria-label="Etapa 1: Apresentação" aria-current="step"><span>01</span><b>Olá.</b></button><button type="button" data-chapter="1" aria-label="Etapa 2: Competências"><span>02</span><b>Skills.</b></button><button type="button" data-chapter="2" aria-label="Etapa 3: Projetos"><span>03</span><b>Trabalho.</b></button><button type="button" data-chapter="3" aria-label="Etapa 4: Percurso"><span>04</span><b>Percurso.</b></button><button type="button" data-chapter="4" aria-label="Etapa 5: Contacto"><span>05</span><b>Contacto.</b></button></nav></div>
-        <p class="mouse-instruction" id="mouse-instruction"><svg viewBox="0 0 24 32" fill="none" aria-hidden="true"><rect x="3" y="2" width="18" height="28" rx="9"/><path d="M12 7v6"/></svg><span>Clica no quadro.<br><b>Ou usa a roda do rato.</b></span></p>
-      </div>
-      <p class="sr-only" id="announcement" role="status" aria-live="polite"></p>
-    </main>
-    <footer><span>© <span id="year">2026</span> ADJELSON NEVES</span><span class="keyboard-tip">EXPLORA. SEM PRESSA.</span><span>FEITO PARA QUEM TEM CURIOSIDADE.</span></footer>
-  </div>
-  <noscript><p class="no-script-note">Estás no modo de leitura. Todas as etapas e contactos estão disponíveis abaixo umas das outras.</p></noscript>
-  <div class="board-cursor" id="board-cursor" aria-hidden="true"><i></i><span>APAGAR</span></div>
+    <section class="skills-section" id="competencias" aria-labelledby="skills-title">
+      <div class="liquid-edge" aria-hidden="true"><svg viewBox="0 0 1440 100" preserveAspectRatio="none"><path d="M0 70Q360-40 720 50T1440 30V100H0Z"/></svg></div>
+      <div class="skills-blob" aria-hidden="true"></div>
+      <div class="wrap skills-inner"><div class="eyebrow" data-reveal>02 / AS MINHAS FERRAMENTAS</div><h2 id="skills-title" data-reveal>Design no olhar.<br><em>Código nas mãos.</em></h2><div class="skill-cloud" aria-label="Tecnologias"><span class="skill-pill pill-light" data-reveal>React <small><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></small></span><span class="skill-pill pill-lime" data-reveal>TypeScript <small>{ }</small></span><span class="skill-pill pill-light" data-reveal>Next.js <small><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></small></span><span class="skill-pill pill-orange" data-reveal>Node.js <small>◇</small></span><span class="skill-pill pill-light" data-reveal>SQL <small>≋</small></span><span class="skill-pill pill-lime" data-reveal>Tailwind <small>~</small></span><span class="skill-pill pill-light" data-reveal>Git <small>+</small></span><span class="skill-pill pill-orange" data-reveal>Docker <small>▦</small></span></div><div class="capabilities" data-reveal><div><span>01</span><h3>Frontend</h3><p>Responsivo. Intuitivo. Reutilizável.</p></div><div><span>02</span><h3>APIs & dados</h3><p>Integrações que fazem sentido.</p></div><div><span>03</span><h3>Em equipa</h3><p>Git, code reviews e Agile.</p></div></div></div>
+    </section>
+
+    <section class="about-section wrap" id="sobre" aria-labelledby="about-title">
+      <div class="about-title" data-reveal><div class="eyebrow">03 / A PESSOA POR TRÁS</div><h2 id="about-title">Curioso por natureza.<br><em>Developer por escolha.</em></h2><span class="about-doodle" aria-hidden="true">☺</span></div>
+      <div class="about-content" data-reveal><p>Sou <strong>Adjelson das Neves</strong>, engenheiro informático com foco em <strong>React e TypeScript.</strong></p><div class="experience-row"><span>INE</span><div>Desenvolvedor Full Stack<small>SET 2025 — MAI 2026</small></div></div><div class="experience-row"><span>Registos & Notariado</span><div>Desenvolvedor Frontend<small>FEV — SET 2025</small></div></div><div class="education-line">USTP · Engenharia Informática<br>Erasmus+ · Politécnico de Beja</div></div>
+    </section>
+
+    <section class="contact-section" id="contacto" aria-labelledby="contact-title">
+      <canvas id="contact-canvas" aria-hidden="true"></canvas>
+      <div class="contact-grid" aria-hidden="true"></div>
+      <div class="wrap contact-content"><div class="contact-copy" data-reveal><div class="eyebrow"><span class="small-dot"></span> A PRÓXIMA IDEIA PODE SER A TUA.</div><h2 id="contact-title">Vamos criar<br>algo <em>bom?</em></h2><a class="button button-lime magnetic" href="mailto:nitoadjelson@gmail.com">Diz-me olá <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a class="email-link" href="mailto:nitoadjelson@gmail.com">nitoadjelson@gmail.com</a><div class="contact-socials"><a href="https://linkedin.com/in/adjelson" target="_blank" rel="noopener noreferrer">LinkedIn <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="https://github.com/Adjelson" target="_blank" rel="noopener noreferrer">GitHub <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></div></div><div class="portrait-composition" data-reveal><div class="portrait-star" aria-hidden="true"><svg class="star-icon" viewBox="0 0 100 100" aria-hidden="true"><path d="m50 0 8 31L85 15 69 42l31 8-31 8 16 27-27-16-8 31-8-31-27 16 16-27L0 50l31-8-16-27 27 16Z"/></svg></div><div class="portrait-backdrop"></div><div class="portrait-frame"><!-- Substitui o src pela tua fotografia: assets/adjelson.jpg. --><img src="assets/portrait-placeholder.svg" alt="Retrato ilustrativo provisório, a substituir pela fotografia de Adjelson" width="600" height="720" loading="lazy"></div><div class="portrait-label">Adjelson Neves<small>HUMANO. CURIOSO. DEVELOPER.</small></div><span class="placeholder-note">Retrato ilustrativo provisório</span></div></div>
+      <footer class="wrap footer"><a class="brand" href="#inicio" aria-label="Voltar ao início">an<span><svg class="star-icon" viewBox="0 0 100 100" aria-hidden="true"><path d="m50 0 8 31L85 15 69 42l31 8-31 8 16 27-27-16-8 31-8-31-27 16 16-27L0 50l31-8-16-27 27 16Z"/></svg></span></a><span>© <span id="year">2026</span> Adjelson Neves</span><button type="button" class="motion-toggle" id="motion-toggle" aria-pressed="true">Pausar movimento</button><a href="#inicio" class="back-top">Voltar ao topo ↑</a></footer>
+    </section>
+  </main>
+  <div class="pointer-dot" aria-hidden="true"></div>
+  <p class="sr-only" id="spark-status" aria-live="polite"></p>
   <script src="portfolio.js"></script>
 </body>
 </html>
