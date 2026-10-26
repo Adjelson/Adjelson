@@ -17,33 +17,13 @@
 
 <img width="100%" src="./assets/profile-terminal.svg" alt="Resumo profissional de Adjelson em formato terminal" />
 
-Sou licenciado em **Engenharia Informática** e tenho experiência prática no desenvolvimento de aplicações web full-stack, aplicações mobile, APIs REST e sistemas orientados à gestão e ao processamento de dados.
+Sou **Adjelson das Neves**, licenciado em **Engenharia Informática**, com experiência profissional em desenvolvimento Frontend e Full Stack de aplicações web institucionais.
 
-<table>
-<tr>
-<td width="50%" valign="top">
+O meu foco profissional é **Frontend com React e TypeScript**: criar interfaces claras, integrar APIs REST e desenvolver componentes reutilizáveis. Tenho também experiência em gestão de dados estatísticos, bases de dados relacionais e desenvolvimento mobile.
 
-### 💻 Desenvolvimento
-
-- Frontend com **React, Next.js, Angular e TypeScript**
-- Backend com **Node.js, Express, Spring Boot, Laravel e PHP**
-- Mobile com **Flutter e React Native**
-- Interfaces responsivas e componentes reutilizáveis
-
-</td>
-<td width="50%" valign="top">
-
-### 🎯 Foco profissional
-
-- Arquitetura de APIs REST
-- Segurança, autenticação e auditoria
-- Modelação de bases de dados
-- Acessibilidade e usabilidade
-- Clean Code e aprendizagem contínua
-
-</td>
-</tr>
-</table>
+- **Frontend:** React, TypeScript, Next.js, Angular e Vue.js.
+- **Full Stack:** integração de APIs REST, Node.js e bases de dados relacionais.
+- **Forma de trabalhar:** atenção à experiência do utilizador, code reviews e Agile/Scrum, com apoio de ferramentas de IA generativa, incluindo Claude Code.
 
 ---
 
@@ -51,15 +31,11 @@ Sou licenciado em **Engenharia Informática** e tenho experiência prática no d
 
 <div align="center">
 
-### Linguagens, frameworks e ferramentas
+### Foco em Frontend · React & TypeScript
 
-[![My Skills](https://skillicons.dev/icons?i=js,ts,php,java,python,html,css,react&theme=dark&perline=8)](https://skillicons.dev)
+[![Tecnologias em destaque](https://skillicons.dev/icons?i=react,ts,nextjs,tailwind,nodejs,mysql,git,docker&theme=dark&perline=8)](https://skillicons.dev)
 
-[![My Skills](https://skillicons.dev/icons?i=nextjs,angular,flutter,nodejs,express,spring,laravel,tailwind&theme=dark&perline=8)](https://skillicons.dev)
-
-[![My Skills](https://skillicons.dev/icons?i=bootstrap,postgres,mysql,sqlite,prisma,docker,git,github&theme=dark&perline=8)](https://skillicons.dev)
-
-[![My Skills](https://skillicons.dev/icons?i=linux,postman,vscode,figma,vite,npm,firebase,androidstudio&theme=dark&perline=8)](https://skillicons.dev)
+React e TypeScript em destaque, com experiência em interfaces institucionais, integração de APIs e componentes reutilizáveis.
 
 </div>
 
@@ -69,7 +45,7 @@ Sou licenciado em **Engenharia Informática** e tenho experiência prática no d
 
 | Área | Tecnologias |
 |---|---|
-| **Frontend** | React, Next.js, Angular, TypeScript, JavaScript, Tailwind CSS, Bootstrap |
+| **Frontend** | React, Next.js, Angular, Vue.js, TypeScript, JavaScript, Tailwind CSS, Bootstrap |
 | **Mobile** | Flutter, React Native, Expo, React Navigation, Zustand |
 | **Backend** | Node.js, Express, Spring Boot, Laravel, PHP, REST APIs, JWT |
 | **Dados** | PostgreSQL, MySQL, MariaDB, SQLite, Prisma ORM, SQL |
@@ -80,53 +56,72 @@ Sou licenciado em **Engenharia Informática** e tenho experiência prática no d
 
 ---
 
+## `03. PROJETOS_EM_DESTAQUE`
+
+### 📊 SIGI — Sistema Integrado de Gestão de Inquérito
+
+Aplicações institucionais para visualização e gestão de dados estatísticos de grande escala.
+
+**O meu contributo:** desenvolvimento e otimização de aplicações para acompanhar dados em tempo real, com atenção à integridade da informação.
+
+### 🗂️ Interfaces para os Registos e Serviços Notariais
+
+Interfaces web para sistemas institucionais da Direção-Geral dos Registos e Serviços Notariais.
+
+**O meu contributo:** criação de componentes reutilizáveis e otimização de interfaces, com foco na experiência do utilizador e no desempenho.
+
+**Tecnologias:** Next.js, Vue.js, Tailwind CSS e Docker.
+
+### 📝 Recolha digital de dados estatísticos
+
+Questionários digitais para apoiar operações de recolha de dados no Instituto Nacional de Estatística.
+
+**O meu contributo:** configuração de questionários em **CSPro e Field Maps** e otimização dos fluxos de trabalho de recolha.
+
+---
+
 ## `04. GITHUB_DASHBOARD`
 
 <div align="center">
 
-<img width="98%" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Adjelson&theme=tokyonight" alt="Resumo do perfil GitHub" />
-
-<img width="49%" src="https://github-readme-stats.vercel.app/api?username=Adjelson&show_icons=true&theme=tokyonight&hide_border=false&border_color=7C3AED&bg_color=0D1117&title_color=C084FC&text_color=C9D1D9&icon_color=22D3EE&locale=pt-br" alt="Estatísticas GitHub de Adjelson" />
-<img width="49%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Adjelson&layout=compact&langs_count=10&theme=tokyonight&hide_border=false&border_color=22D3EE&bg_color=0D1117&title_color=22D3EE&text_color=C9D1D9&locale=pt-br" alt="Linguagens mais utilizadas" />
-
-<img width="64%" src="https://streak-stats.demolab.com?user=Adjelson&theme=tokyonight" alt="Sequência de contribuições GitHub" />
+<img width="98%" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Adjelson&theme=tokyonight" alt="Resumo da atividade e contribuições de Adjelson no GitHub" />
 
 </div>
-
-### Gráfico de atividade
-
-[![Gráfico de atividade de Adjelson](https://github-readme-activity-graph.vercel.app/graph?username=Adjelson&bg_color=0D1117&color=C084FC&line=22D3EE&point=A3E635&area=true&hide_border=false&border_color=7C3AED&custom_title=Atividade%20de%20Contribui%C3%A7%C3%A3o)](https://github.com/Adjelson)
 
 ---
 
 ## `05. EXPERIÊNCIA`
 
-<table>
-<tr>
-<td width="50%" valign="top">
+### Desenvolvedor Full Stack · Instituto Nacional de Estatística
+**Setembro de 2025 — Maio de 2026**
 
-### 🏛️ Instituto Nacional de Estatística
+Desenvolvimento e otimização de aplicações SIGI para visualização e gestão de dados estatísticos de grande escala, incluindo acompanhamento em tempo real e integridade dos dados.
 
-- Desenvolvimento de aplicações full-stack
-- React, Node.js, TypeScript e MySQL
-- APIs REST e validação de dados
-- Sistemas para operações estatísticas
-- Manutenção evolutiva e corretiva
+### Desenvolvedor Front-End · Direção-Geral dos Registos e Serviços Notariais
+**Fevereiro de 2025 — Setembro de 2025**
 
-</td>
-<td width="50%" valign="top">
+Criação de interfaces e componentes reutilizáveis com **Next.js, Vue.js e Tailwind CSS**, em aplicações integradas em Docker. Trabalho orientado à melhoria da experiência do utilizador e do desempenho dos sistemas institucionais.
 
-### 🗂️ Registos e Serviços Notariais
+### Consultor de TI · Instituto Nacional de Estatística
+**Abril de 2024 — Dezembro de 2024**
 
-- Desenvolvimento frontend
-- Next.js, Tailwind CSS e Bootstrap
-- Interfaces responsivas
-- Componentes reutilizáveis
-- Melhoria de acessibilidade e UX/UI
+Configuração de questionários digitais em **CSPro e Field Maps**, com otimização dos fluxos de recolha de dados.
 
-</td>
-</tr>
-</table>
+### Estágio em Helpdesk · Instituto Nacional de Estatística
+**Dezembro de 2023 — Abril de 2024**
+
+Manutenção de equipamentos informáticos, instalação de software e resolução de problemas técnicos.
+
+<details>
+<summary><strong>🎓 Formação, certificações e idiomas</strong></summary>
+
+- **Licenciatura em Engenharia Informática** · Faculdade de Ciências e Tecnologia, USTP · 2021–2025.
+- **Erasmus+ em Engenharia** · Instituto Politécnico de Beja · Fevereiro–Julho de 2025.
+- **JavaScript Essentials** · Cisco Networking Academy.
+- **Artificial Intelligence Fundamentals** · IBM SkillsBuild.
+- **Idiomas:** Português nativo · Espanhol profissional · Inglês intermédio/B1 (comunicação técnica).
+
+</details>
 
 ---
 
